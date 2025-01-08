@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct DepartmentDetailView: View {
+    
+    // MARK: Stored property
+    let departmentToShow: Department
+    
+    // MARK: Computed property
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(departmentToShow.items) { currentItem in
+            Text(currentItem.name)
+        }
+        .navigationTitle(departmentToShow.name)
     }
 }
 
 #Preview {
-    DepartmentDetailView()
+    DepartmentDetailView(departmentToShow:thisWeeksFlyer.departments[2])
 }

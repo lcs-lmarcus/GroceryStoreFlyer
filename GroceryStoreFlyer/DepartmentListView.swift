@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct DepartmentListView: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationStack {
+            
+            List(thisWeeksFlyer.departments) {
+                currentDepartment in
+                
+                NavigationLink {
+                    Text(currentDepartment.name)
+                } label: {
+                    Text(currentDepartment.name)
+                }
+            }
+            .navigationTitle("Weekly Flyer")
+        }
     }
 }
-
 #Preview {
-    DepartmentListView()
-}
+            DepartmentListView()
+        }
