@@ -15,10 +15,17 @@ struct DepartmentDetailView: View {
     // MARK: Computed property
     var body: some View {
         List(departmentToShow.items) { currentItem in
-            Text(currentItem.name)
+        
+                Text(currentItem.name)
+                .bold()
+                Image (currentItem.image)
+                    .resizable()
+                    .scaledToFit()
+                   
+                
+                    .listStyle(.plain)
+                    .navigationTitle(departmentToShow.name)
         }
-        .listStyle(.plain)
-        .navigationTitle(departmentToShow.name)
     }
 }
 
