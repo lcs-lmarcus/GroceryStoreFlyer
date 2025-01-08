@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DepartmentListView: View {
     
+    
     var body: some View {
         
         NavigationStack {
@@ -26,6 +27,7 @@ struct DepartmentListView: View {
         }
     }
 }
+
 #Preview {
-            DepartmentListView()
-        }
+    DepartmentListView()
+}
